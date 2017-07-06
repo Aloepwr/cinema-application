@@ -8,7 +8,7 @@ import { CinemaMoviesRow } from './CinemaMoviesRow'
 
 
 export const CinemaMoviesList = ({movies, filter}) => {
-	const filteredMovies = (!filter || !filter.match(/action|comedy/)) ? movies : movies.filter(movie => movie[filter])
+	const filteredMovies = (!filter || !filter.match(/action|comedy/)) ? movies : movies.filter(movie => movie[filter]);
 	
 	return (
 		<div className="cinema-movies-list">
@@ -22,13 +22,13 @@ export const CinemaMoviesList = ({movies, filter}) => {
 					</tr>
 					<tr>
 						<td colSpan={4}>
-							<Link to="/total-movies">
+							<Link to="/event-list">
 								All movies
 							</Link>
-							<Link to="/total-movies/action-movies">
+							<Link to="/event-list/action-movies">
 								Action movies
 							</Link>
-							<Link to="/total-movies/comedy-movies">
+							<Link to="/event-list/comedy-movies">
 								Comedy movies
 							</Link>
 						</td>

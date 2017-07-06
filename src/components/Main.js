@@ -11,6 +11,7 @@ export const Main = () => (
 			<Route exact path="/" component={CinemaMoviesAmount} />
 			<Route path="/add-event" component={AddEventForm} />
 			<Route path="/event-list" component={CinemaMoviesCounter} />
+			<Route path="/event-list/:filter" component={CinemaMoviesCounter} />
 		</Switch>
 	</main>
 )

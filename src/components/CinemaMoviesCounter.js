@@ -39,7 +39,9 @@ export class CinemaMoviesCounter extends Component {
 	render() {
 		return (
 			<div>
-				<CinemaMoviesList movies={this.state.allMoviesList} />
+				<CinemaMoviesList movies={this.state.allMoviesList}
+								  filter={this.props.match.params.filter}
+				/>
 			</div>
 		)
 	}
