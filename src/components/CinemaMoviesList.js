@@ -8,8 +8,8 @@ import { CinemaMoviesRow } from './CinemaMoviesRow'
 
 
 export const CinemaMoviesList = ({movies, filter}) => {
-	//const filteredMovies = (!filter || !filter.match(/action|comedy/)) ? movies : movies.filter(movie => movie[filter])
-
+	const filteredMovies = (!filter || !filter.match(/action|comedy/)) ? movies : movies.filter(movie => movie[filter])
+	
 	return (
 		<div className="cinema-movies-list">
 			<table>
@@ -35,7 +35,7 @@ export const CinemaMoviesList = ({movies, filter}) => {
 					</tr>
 				</thead>
 				<tbody>
-					{movies.map((movie, i) => 
+					{filteredMovies.map( (movie, i) => 
 						<CinemaMoviesRow key={i} {...movie} />
 					)}
 				</tbody>

@@ -3,6 +3,7 @@ import FighterJet from 'react-icons/lib/fa/fighter-jet'
 import Movie from 'react-icons/lib/ti/film'
 
 import PropTypes from 'prop-types'
+
 import '../stylesheets/ui.scss'
 
 
@@ -14,21 +15,21 @@ const calcGoalProgress = (total, goal) => {
 	return percentToDecimal(total/goal);
 };
 
-export const CinemaMoviesCount = ({total=20, action=10, comedy=5, goal=30}) => (
-	<div className="cinema-movies-count">
+export const CinemaMoviesAmount = ({total=15, action=5, comedy=10, goal=30}) => (
+	<div className="cinema-movies-amount">
 		<div className="total-movies">
 			<span>{total}</span>
-			<Movie />
+				<Movie />
 			<span>movies</span>
 		</div>
 		<div className="action-movies">
 			<span>{action}</span>
-			<FighterJet />
+				<FighterJet />
 			<span>movies</span>
 		</div>
 		<div className="comedy-movies">
 			<span>{comedy}</span>
-			<Smile />
+				<Smile />
 			<span>movies</span>
 		</div>
 		<div>
@@ -39,7 +40,8 @@ export const CinemaMoviesCount = ({total=20, action=10, comedy=5, goal=30}) => (
 	</div>
 );
 
-CinemaMoviesCount.propTypes = {
+
+CinemaMoviesAmount.propTypes = {
 	total: PropTypes.number,
 	action: PropTypes.number,
 	comedy: PropTypes.number,

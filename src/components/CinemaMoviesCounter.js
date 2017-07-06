@@ -1,18 +1,9 @@
-// import { Component } from 'react'
+import { Component } from 'react'
 
-import { Main } from './components/Main'
-import { Menu } from './components/Menu'
+import { CinemaMoviesList } from './CinemaMoviesList'
 
-export const App = () => (
-	<div className="app">
-		<Main />
-		<Menu />
-	</div>
-)
-	
-			
 
-/*export class App extends Component {
+export class CinemaMoviesCounter extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -47,12 +38,9 @@ export const App = () => (
 	}
 	render() {
 		return (
-			<div className="app">
-
-			<Main />
-			<Menu />
-
+			<div>
+				<CinemaMoviesList movies={this.state.allMoviesList} />
 			</div>
 		)
 	}
-}*/
+}
